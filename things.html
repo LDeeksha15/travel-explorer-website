@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Explorer | Things To Do</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+<nav>
+  <a href="home.html">Home</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="things.html">Things To Do</a>
+  <a href="contact.html">Contact</a>
+  <a href="#" onclick="logout()">Logout</a>
+</nav>
+
+<header>
+  <img src="logo.jpeg" alt="Travel Explorer Logo" width="80">
+  <h1>Things To Do</h1>
+  <p>Explore activities that make your trip memorable </p>
+</header>
+
+<section class="page-icon">
+  <img src="things-icon.jpeg" alt="Things to Do Icon" width="100">
+</section>
+
+<main>
+
+  <div class="card">
+    <img src="paris1.jpeg" alt="Paris Activities">
+    <h3>Paris</h3>
+    <p>
+      Enjoy sightseeing at the Eiffel Tower, relax in cozy cafés,
+      and explore world-famous museums like the Louvre.
+    </p>
+    <a href="https://littlegreybox.net/33-of-the-best-things-to-do-in-paris-must-know-travel-tips/" target="_blank" class="info-link">
+      More Info →
+    </a>
+  </div>
+
+  <div class="card">
+    <img src="tokyo1.jpeg" alt="Tokyo Activities">
+    <h3>Tokyo</h3>
+    <p>
+      Experience vibrant shopping streets, visit ancient temples,
+      and enjoy authentic Japanese food and culture.
+    </p>
+    <a href="https://travellingfoodie.net/best-things-to-do-in-tokyo/" target="_blank" class="info-link">
+      More Info →
+    </a>
+  </div>
+
+  <div class="card">
+    <img src="newyork1.jpeg" alt="New York Activities">
+    <h3>New York</h3>
+    <p>
+      Watch Broadway shows, walk through Central Park,
+      and enjoy the energetic city nightlife.
+    </p>
+    <a href="https://www.bookishwayfarer.com/blog/21-incredible-things-to-see-and-do-in-new-york-city" target="_blank" class="info-link">
+      More Info →
+    </a>
+  </div>
+
+</main>
+
+<script>
+    if (!localStorage.getItem("loggedInUser")) {
+    window.location.replace("index.html");
+  }
+
+function logout() {
+  localStorage.removeItem("loggedInUser");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
