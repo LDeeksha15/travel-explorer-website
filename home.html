@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Explorer | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+  if (!localStorage.getItem("loggedInUser")) {
+    window.location.href = "index.html";
+  }
+</script>
+
+<nav>
+  <a href="home.html">Home</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="things.html">Things To Do</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="#" onclick="logout()">Logout</a>
+</nav>
+
+<header>
+  <img src="logo.jpeg" alt="Travel Explorer Logo" width="80">
+  <h1>Travel Explorer</h1>
+  <p>Discover amazing destinations</p>
+</header>
+
+<main>
+  <h2 id="welcomeUser"></h2>
+  <p>Plan your next adventure with us.</p>
+
+  <!-- Hero/banner image below welcome -->
+  <img src="hero-travel.jpeg" alt="New York City Sunset" class="hero-image">
+</main>
+
+<script>
+    if (!localStorage.getItem("loggedInUser")) {
+    window.location.replace("index.html");
+  }
+
+      document.getElementById("welcomeUser").innerText =
+    "Welcome, " + localStorage.getItem("loggedInUser") ;
+
+  function logout() {
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>
