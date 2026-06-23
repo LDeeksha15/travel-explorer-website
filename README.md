@@ -28,7 +28,7 @@ Travel Explorer is a responsive travel web application that enables users to exp
 - Local Storage
 - GitHub Pages
 
-## 📊 Project Highlights
+## Project Highlights
 
 - Developed a multi-page travel website with secure login functionality.
 - Implemented dynamic destination search using JavaScript.
@@ -36,22 +36,40 @@ Travel Explorer is a responsive travel web application that enables users to exp
 - Designed a responsive and visually appealing interface.
 - Deployed the application using GitHub Pages.
 
-## Application Screenshots
+## 📸 Application Screenshots
 
 ### Login Page
 ![Login Page](login-page.png)
 
+Secure authentication page with username/password validation and show/hide password functionality.
+
+---
+
 ### Home Page
 ![Home Page](home-page.png)
+
+Homepage featuring personalized welcome message, navigation menu, branding, and travel-themed hero banner.
+
+---
 
 ### Destinations Page
 ![Destinations Page](destinations-page.png)
 
+Interactive destination discovery page with dynamic search functionality and destination filtering.
+
+---
+
 ### Things To Do Page
 ![Things To Do Page](things-page.png)
 
+Travel activity recommendations with destination-specific attractions, descriptions, and external information links.
+
+---
+
 ### Contact Page
 ![Contact Page](contact-page.png)
+
+Contact form with input validation, phone number verification, and user feedback notifications.
 
 ## Skills Demonstrated
 
