@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Explorer | Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="home.html">Home</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="things.html">Things To Do</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="#" onclick="logout()">Logout</a>
+</nav>
+
+<header>
+    <img src="logo.jpeg" alt="Travel Explorer Logo" width="80">
+  <h1>Contact Us</h1>
+  <p>We would love to hear from you </p>
+</header>
+
+<section class="page-icon">
+  <img src="contact-icon.jpeg" alt="Contact Icon" width="100">
+</section>
+
+<main>
+  <form onsubmit="return validateContactForm()">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</main>
+
+<script>
+    if (!localStorage.getItem("loggedInUser")) {
+    window.location.replace("index.html");
+  }
+
+function validateContactForm() {
+  const phone = document.getElementById("phone").value;
+
+  //  Phone must be exactly 10 digits
+  const phonePattern = /^[0-9]{10}$/;
+
+  if (!phonePattern.test(phone)) {
+    alert(" Phone number must be exactly 10 digits");
+    return false;
+  }
+
+  alert(" Thank you! Your message has been sent successfully ");
+  return false; // prevent page reload
+}
+
+function logout() {
+  localStorage.removeItem("loggedInUser");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
