@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Explorer | Destinations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+  if (!localStorage.getItem("loggedInUser")) {
+    window.location.href = "index.html";
+  }
+</script>
+
+<nav>
+  <a href="home.html">Home</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="things.html">Things To Do</a>
+  <a href="contact.html">Contact</a>
+  <a href="#" onclick="logout()">Logout</a>
+</nav>
+
+<header>
+    <img src="logo.jpeg" alt="Travel Explorer Logo" width="80">
+  <h1>Destinations</h1>
+  <input type="text" id="search" placeholder="Search destinations..." onkeyup="filterDestinations()">
+</header>
+
+<section class="page-icon">
+  <img src="destination-icon.jpeg" alt="Things to Do Icon" width="100">
+</section>
+
+<main id="cards">
+  <div class="card">
+    <img src="paris.jpeg" alt="Paris">
+    <h3>Paris</h3>
+    <p>Eiffel Tower, Louvre</p>
+  </div>
+
+  <div class="card">
+    <img src="tokyo.jpeg" alt="Tokyo">
+    <h3>Tokyo</h3>
+    <p>Temples, Shopping</p>
+  </div>
+
+  <div class="card">
+    <img src="newyork.jpeg" alt="New York">
+    <h3>New York</h3>
+    <p>Times Square, Central Park</p>
+  </div>
+
+  <p id="noResults" style="display:none; color:#b00020; font-weight:bold; text-align:center; margin-top:20px;">
+    No destinations found. Please try another search.
+  </p>
+</main>
+
+<script>
+function filterDestinations() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let cards = document.getElementsByClassName("card");
+  let noResults = document.getElementById("noResults");
+  let visibleCount = 0;
+
+  for (let card of cards) {
+    if (card.innerText.toLowerCase().includes(input)) {
+      card.style.display = "inline-block";
+      visibleCount++;
+    } else {
+      card.style.display = "none";
+    }
+  }
+
+  noResults.style.display = visibleCount === 0 ? "block" : "none";
+}
+
+function logout() {
+  localStorage.removeItem("loggedInUser");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
