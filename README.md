@@ -82,3 +82,7 @@ Contact form with input validation, phone number verification, and user feedback
 - UI/UX Design
 - GitHub Deployment
 
+## Conclusion
+
+Travel Explorer Website is a responsive and interactive web application that enables users to explore destinations, discover travel activities, and engage through a user-friendly interface. The project highlights practical skills in HTML, CSS, JavaScript, DOM Manipulation, and web deployment.
+
